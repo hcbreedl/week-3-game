@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+	<title>Hangman</title>
+	<script type="text/javascript">
+		var wins = 0;
+		var guessesRemaining = 0;
+		var alreadyGuessed = 0;
+		var pokemonWords = [
+		['c','h','a','r','m','a','n','d','e','r'],
+		['s','q','u','i','r','t','l','e'],
+		['v','e','n','o','s','a','u','r']
+		];
+
+		document.onkeyup = function(event) {
+			var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
+			var randomPokemon = pokemonWords[Math.floor(Math.random() * pokemonWords.length)];
+
+			for (i = 0; i < randomPokemon; i++) {
+				console.log(' _ ');
+			}
+
+
+		var html = "<p>Press any key to get started!</p>" + 
+			"<p>Wins: " + wins + "</p>" +
+			"<p>Number of guesses remaining: " + guessesRemaining + "</p>" +
+			"<p>Letters already guessed: " + alreadyGuessed + "</p>" +
+			"<br>" +
+			"<p>" + " " + "</p>";
+
+			document.querySelector('#game').innerHTML = html;
+		}
+	</script>
+</head>
+
+<body>
+	<div id="game">
+		<p>Press any key to get started!</p>
+
+	</div>
+</body>
+</html>
