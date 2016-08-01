@@ -1,0 +1,19 @@
+body {
+	background-image: url(https://github.com/hcbreedl/week-3-game/blob/master/assets/images/BackgroundImage.jpg?raw=true);
+	background-size: cover;
+}
+
+#game {
+	float: right;
+    margin-top: 50px;
+    margin-right: 200px;
+    margin-left: 20px;
+    font-size: 24px;
+    text-align: center;
+    border: solid black 1px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 20px;
+    padding-top: 50px;
+    color: white;
+}

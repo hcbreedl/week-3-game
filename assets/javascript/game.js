@@ -1,4 +1,6 @@
-var wins = 0;
+
+
+		var wins = 0;
 		var guessesRemaining = 15;
 		var alreadyGuessed = [];
 		var words = [
@@ -73,13 +75,13 @@ var wins = 0;
 		    
 		    
 		    var html = 
-		        "<p>Press any key to get started!</p>" +
-		        "<p>Wins: " + wins + "</p>" +
-		        "<p>Current Word: </p>" +
+		        "<p><strong>Press any key to get started!</strong></p><br>" +
+		        "<p>Wins: " + wins + "</p><br>" +
+		        "<p>Current Word: </p><br>" +
 			    //Everthing pertaining to the placeholders and such
 		        placeholder + 
-		        "<p>Number of Guesses Remaining: " + guessesRemaining + "<p>" +
-			    "<p>Letters Already Guessed: " + alreadyGuessed + "</p>";
+		        "<p>Number of Guesses Remaining: " + guessesRemaining + "<p><br>" +
+			    "<p>Letters Already Guessed: <br>" + alreadyGuessed + "</p><br>";
 
 			document.querySelector("#game").innerHTML = html;
 		};
