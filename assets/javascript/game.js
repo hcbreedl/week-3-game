@@ -100,7 +100,7 @@
 		        "<p>Wins: " + wins + "</p><br>" +
 		        "<p>Current Word: </p><br>" +
 			    //Everthing pertaining to the placeholders and such
-		        placeholder.join('') + "<p><br></p>" + 
+		        "<p id=\"placeholder\">" + placeholder.join('') + "</p>" + "<p><br></p>" + 
 		        "<p>Number of Guesses Remaining: " + guessesRemaining + "<p><br>" +
 			    "<p>Letters Already Guessed: <br>" + alreadyGuessed.join('') + "</p><br>";
 
