@@ -50,6 +50,10 @@
 				    return true;
 			};
 
+			function displayImage() {
+				document.getElementById("#image").src="http://orig13.deviantart.net/e072/f/2015/143/b/f/006_charizard_by_ridvanozturk-d8ufyhz.png"
+			};
+
 			if (arraysEqual(placeholder, wordToGuess)) {
 				alert("YOU WIN!");
 				wins++;
@@ -60,6 +64,8 @@
 				for (i = 0; i < wordToGuess.length; i++) {
 				placeholder[i] = ' _ ';
 				};
+				//display wordToGuess video
+				displayImage();
 			}
 
 			if (guessesRemaining === 0) {
@@ -72,16 +78,18 @@
 				placeholder[i] = ' _ ';
 				};
 			}
+
+
 		    
 		    
 		    var html = 
-		        "<p><strong>Press any key to get started!</strong></p><br>" +
+		        "<p><strong>Press any key to keep guessing!</strong></p><br>" +
 		        "<p>Wins: " + wins + "</p><br>" +
 		        "<p>Current Word: </p><br>" +
 			    //Everthing pertaining to the placeholders and such
-		        placeholder + 
+		        placeholder.join('') + "<p><br></p>" + 
 		        "<p>Number of Guesses Remaining: " + guessesRemaining + "<p><br>" +
-			    "<p>Letters Already Guessed: <br>" + alreadyGuessed + "</p><br>";
+			    "<p>Letters Already Guessed: <br>" + alreadyGuessed.join('') + "</p><br>";
 
 			document.querySelector("#game").innerHTML = html;
 		};
