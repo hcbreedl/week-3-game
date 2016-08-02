@@ -50,12 +50,8 @@
 				    return true;
 			};
 
-			function displayImage() {
-				document.getElementById("#image").src="http://orig13.deviantart.net/e072/f/2015/143/b/f/006_charizard_by_ridvanozturk-d8ufyhz.png"
-			};
-
 			if (arraysEqual(placeholder, wordToGuess)) {
-				alert("YOU WIN!");
+				alert("YOU WIN! Hit OK to play the Pokemon Theme! Careful! Once it starts, it will not stop! Gotta Guess them all!!!!");
 				wins++;
 				guessesRemaining = 15;
 				alreadyGuessed = [];
@@ -65,7 +61,8 @@
 				placeholder[i] = ' _ ';
 				};
 				//display wordToGuess video
-				displayImage();
+				var audio = new Audio('http://216.227.134.162/ost/pokemon-ten-years-of-pokemon/lcmjyyaprv/1-pokemon-theme-season-theme-.mp3');
+					audio.play();
 			}
 
 			if (guessesRemaining === 0) {
